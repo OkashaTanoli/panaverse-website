@@ -28,16 +28,16 @@ function Header() {
     return (
         <ChakraProvider>
             <div className={`bg-[#ffffff9d] backdrop-blur-xl w-full flex justify-center ${poppins.className} sticky top-0 z-20 border-b border-gray-200`}>
-                <div className='w-[1200px] py-4 flex justify-between items-center xl:w-[95%]'>
+                <div className='w-[1200px] py-4 md:py-2 flex justify-between items-center xl:w-[95%]'>
                     <Link href={'/'}>
-                        <Image className='h-auto' src={logo} alt='logo' width={100} />
+                        <Image className='h-auto md:w-[90px]' src={logo} alt='logo' width={100} />
                     </Link>
                     <div className='flex items-center gap-5 sm:gap-3 text-zinc-600 text-sm font-bold'>
                         <Link href={'/'} className='px-5 cursor-pointer md:px-0'>
-                            <Button px={0} fontSize='0.875rem' _hover={{ bg: 'transparent' }} _active={{ bg: 'transparent' }} bgColor={'transparent'}>Home</Button>
+                            <Button px={0} className='md:text-sm' fontSize={['0.8rem','0.8rem','0.875rem' ]}_hover={{ bg: 'transparent' }} _active={{ bg: 'transparent' }} bgColor={'transparent'}>Home</Button>
                         </Link>
                         <Menu>
-                            <MenuButton as={Button} px={0} width='auto' _hover={{ bg: 'transparent' }} _active={{ bg: 'transparent' }} className='sm:px-0' fontSize='0.875rem' bgColor={'transparent'} rightIcon={<ChevronDownIcon />}>
+                            <MenuButton as={Button} px={0} width='auto' _hover={{ bg: 'transparent' }} _active={{ bg: 'transparent' }} className='sm:px-0 md:text-sm' fontSize={['0.8rem','0.8rem','0.875rem' ]} bgColor={'transparent'} rightIcon={<ChevronDownIcon />}>
                                 Tracks
                             </MenuButton>
                             <MenuList padding={'10px 0'} bgColor='rgba(255,255,255,1)' className='sm:w-[100vw] sm:text-sm' >

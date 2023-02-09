@@ -6,6 +6,7 @@ import Specialization from "./specialization/specialization";
 import Outcomeblock from "./outcomeblock/outcomeblock";
 import Coursescoverblock from "./coursescoverblock/coursescoverblock";
 import Coursecontent from "./course_all_content/coursecontent";
+import Loader from "./loading/loader";
 
 export {
     Header,
@@ -15,5 +16,6 @@ export {
     Specialization,
     Outcomeblock,
     Coursescoverblock,
-    Coursecontent
+    Coursecontent,
+    Loader
 }
