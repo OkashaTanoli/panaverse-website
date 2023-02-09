@@ -1,10 +1,9 @@
 
 import React from 'react';
-import { Coursecontent, Coursescoverblock, Header } from '@/components';
+import { Coursecontent, Coursescoverblock } from '@/components';
 import { IQuarterData } from '@/types/types';
 import { Poppins } from '@next/font/google';
 import Link from 'next/link';
-import Footer from '@/components/Footer/footer';
 
 const poppins = Poppins(
     {
@@ -32,11 +31,9 @@ async function Page({ params }: { params: { quarter: string } }) {
     if (!data) {
         return (
             <div className='flex flex-col'>
-                <Header />
                 <div className='flex justify-center items-center py-28'>
                     <h1 className='text-2xl '>Track Not Found !</h1>
                 </div>
-                <Footer />
             </div>
         )
     }
@@ -48,10 +45,8 @@ async function Page({ params }: { params: { quarter: string } }) {
                 <Link href={'/compulsory/2'} className={`h-[80px] w-[80px] md:w-1/2 md:h-[50px] flex justify-center items-center border-b md:border-b-0 md:border-r ${params.quarter !== '2' && 'hover:bg-[#00000017] active:bg-[#00000024]'} cursor-pointer border-gray-50 ${params.quarter === '2' && 'bg-[#8a34d151]'}`}>Q2</Link>
                 <Link href={'/compulsory/3'} className={`h-[80px] w-[80px] md:w-1/2 md:h-[50px] flex justify-center items-center ${params.quarter !== '3' && 'hover:bg-[#00000017] active:bg-[#00000024]'} cursor-pointer ${params.quarter === '3' && 'bg-[#8a34d151]'}`}>Q3</Link>
             </div>
-            <Header />
             <Coursescoverblock id={data?.id} objective={data?.objective} />
             <Coursecontent data={data} />
-            <Footer />
         </div >
     );
 }

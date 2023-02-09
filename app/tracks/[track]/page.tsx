@@ -1,9 +1,8 @@
 import React from 'react';
-import { Header, Coursescoverblock, Coursecontent } from '@/components';
+import { Coursescoverblock, Coursecontent } from '@/components';
 import { IQuarterData } from '@/types/types';
 import { Poppins } from '@next/font/google';
 import Link from 'next/link';
-import Footer from '@/components/Footer/footer';
 
 
 
@@ -36,11 +35,9 @@ async function Page({ params, searchParams }: any) {
     if (!data.data) {
         return (
             <div className='flex flex-col'>
-                <Header />
                 <div className='flex justify-center items-center py-28'>
                     <h1 className='text-2xl '>Track Not Found !</h1>
                 </div>
-                <Footer />
             </div>
         )
     }
@@ -51,7 +48,6 @@ async function Page({ params, searchParams }: any) {
                 <Link href={`/tracks/${params.track}?quarter=4`} className={`h-[80px] w-[80px] md:w-1/2 md:h-[50px] flex justify-center items-center border-b md:border-b-0 md:border-r ${searchParams?.quarter !== '4' && 'hover:bg-[#00000017] active:bg-[#00000024]'} cursor-pointer border-gray-50 ${searchParams?.quarter === '4' && 'bg-[#8a34d151]'}`}>Q4</Link>
                 <Link href={`/tracks/${params.track}?quarter=5`} className={`h-[80px] w-[80px] md:w-1/2 md:h-[50px] flex justify-center items-center ${searchParams?.quarter !== '5' && 'hover:bg-[#00000017] active:bg-[#00000024]'} cursor-pointer ${searchParams?.quarter === '5' && 'bg-[#8a34d151]'}`}>Q5</Link>
             </div>
-            <Header />
             <Coursescoverblock id={data.data.id} objective={data.data.objective} trackName={data.trackName} />
             <div className='w-full'>
                 <div className='w-[1200px] m-auto mt-20 text-zinc-800 xl:w-[95%]'>
@@ -72,7 +68,6 @@ async function Page({ params, searchParams }: any) {
             </div>
             <Coursecontent data={data.data} />
 
-            <Footer />
 
         </div>
     );

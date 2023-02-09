@@ -3,7 +3,7 @@ import './loader.css'
 
 function Loader() {
     return (
-        <div className="lds-ripple" ><div></div><div></div></div >
+        <div className="lds-dual-ring"></div>
     );
 }
 

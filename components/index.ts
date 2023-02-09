@@ -1,4 +1,5 @@
 import Header from "./header/header";
+import Footer from "./Footer/footer";
 import Coverblock from "./coverblock/coverblock";
 import Content from "./content/content";
 import Quarterblock from "./compulsoryquarterblock/quarterblock";
@@ -17,5 +18,6 @@ export {
     Outcomeblock,
     Coursescoverblock,
     Coursecontent,
-    Loader
+    Loader,
+    Footer
 }
