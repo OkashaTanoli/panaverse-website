@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import ArrowImg from '../../public/assets/arrow_img.svg'
 
 let quarter_data = [
     { no: 1, objective: 'CS-101: Object-Oriented Programming using TypeScript' },
@@ -12,27 +10,25 @@ let quarter_data = [
 function Quarterblock() {
     return (
         <div className='py-10 relative'>
-            <Image className='z-0 absolute top-0 rotate-180 left-0' src={ArrowImg} alt="arrow" />
-            <Image className='z-0 absolute top-0 right-0' src={ArrowImg} alt="arrow" />
-            <div className='m-auto w-[1200px]'>
-                <div className='w-full'>
-                    <div className='flex gap-5'>
-                        <h1 className=' z-10 text-center text-5xl font-bold text_gradient'>Compulsory </h1>
-                        <h1 className=' z-10 text-center text-5xl font-bold text-zinc-800'>Courses</h1>
+            <div className='m-auto w-[1200px] xl:w-[95%]'>
+                <div className='w-full z-10 relative'>
+                    <div className='flex gap-5 md:block'>
+                        <h1 className='text-5xl font-bold text_gradient md:text-4xl'>Compulsory </h1>
+                        <h1 className='text-5xl font-bold text-zinc-800 md:text-4xl'>Courses</h1>
                     </div>
-                    <h2 className='text-zinc-800 font-bold text-xl mt-5 z-10 relative'>Core Courses (Common in All Specializations)</h2>
-                    <p className='text-zinc-800 z-10 relative'>Every participant of the program will start by completing the following three core courses:</p>
+                    <h2 className='text-zinc-800 font-bold text-xl mt-5 sm:text-base sm:mt-2'>Core Courses (Common in All Specializations)</h2>
+                    <p className='text-zinc-800 sm:text-sm'>Every participant of the program will start by completing the following three core courses:</p>
                 </div>
-                <div className='flex gap-10 w-full m-auto pb-20 pt-20'>
+                <div className='grid grid-cols-3 gap-10 w-full m-auto pb-14 pt-14 lg:grid-cols-2 md:grid-cols-1 md:gap-5'>
                     {
                         quarter_data.map((val, index) => {
                             return (
-                                <Link key={index} href={`/compulsory/${val.no}`} className='flex items-center gap-5 relative p-5 bg-[#ffffff16] hover:bg-[rgba(167,31,49,0.25)] hover:scale-110 transition-all cursor-pointer border border-gray-200 rounded-3xl w-1/3 backdrop-blur-md shadow-[0_0_15px_rgba(0,0,0,0.18)] overflow-hidden '>
+                                <Link key={index} href={`/compulsory/${val.no}`} className='flex items-center gap-5 relative p-5 bg-[#6f6f6f16] hover:bg-[rgba(167,31,49,0.25)] hover:scale-110 transition-all cursor-pointer border border-gray-300 rounded-3xl backdrop-blur-md  overflow-hidden md:hover:scale-90'>
                                     <div className={`absolute right-0 w-52 h-52 rotate-45 rounded-lg ${val.no === 1 ? 'bg-[rgba(212,106,141,0.3)]' : val.no === 2 ? 'bg-[rgba(99,76,205,0.3)]' : 'bg-[rgba(138,52,209,0.3)]'} blur-3xl`}></div>
-                                    <p className='z-10  text-[10rem] text-[#00000017] font-[900] leading-none'>{val.no}</p>
+                                    <p className='z-10  text-[10rem] text-[#00000017] font-[900] leading-none xl:text-[7rem]'>{val.no}</p>
                                     <div className='z-10 text-zinc-800'>
                                         <p className='font-bold text-2xl'>Quarter {val.no}</p>
-                                        <p className='mt-5 z_index'>{val.objective}</p>
+                                        <p className='mt-5 z_index xl:text-sm'>{val.objective}</p>
                                     </div>
                                 </Link>
                             )

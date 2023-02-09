@@ -1,6 +1,6 @@
 import Header from "./header/header";
 import Coverblock from "./coverblock/coverblock";
-import Content from "./content.tsx/content";
+import Content from "./content/content";
 import Quarterblock from "./compulsoryquarterblock/quarterblock";
 import Specialization from "./specialization/specialization";
 import Outcomeblock from "./outcomeblock/outcomeblock";

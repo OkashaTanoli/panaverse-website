@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import Background from '../../public/assets/background2.png'
-import { CgEditBlackPoint } from 'react-icons/cg'
 import { HiExternalLink } from 'react-icons/hi'
 
 let data = [
@@ -30,13 +29,13 @@ let data = [
 function Outcomeblock() {
     return (
         <div className={`flex justify-center w-full mt-10`}>
-            <div className='flex w-[1200px] items-center justify-between gap-2 '>
-                <div className='w-1/2 relative flex justify-start'>
-                    <Image className='w-[80%]' src={Background} alt='background' />
+            <div className='flex w-[1200px] items-center justify-between gap-2 xl:w-[95%] md:flex-col-reverse'>
+                <div className='w-1/2 relative flex justify-start md:w-full md:justify-center'>
+                    <Image className='w-[80%] lg:w-full md:w-[500px] md:mt-5 sm:w-full' src={Background} alt='background' />
                 </div>
-                <div className='w-1/2 text-4xl'>
+                <div className='w-1/2 text-4xl md:w-full'>
                     <h1 className='font-bold text_gradient'>The Outcome for Participants of the Program</h1>
-                    <p className='text-sm text-zinc-800 mt-5 font-normal'>
+                    <p className='text-base text-zinc-800 mt-5 font-normal md:text-sm'>
                         The graduates of this program will own products (Full-Stack App Templates, AR and VR Experiences, and APIs)
                         that are marketed globally by the Panaverse DAO and, if they like, will also be able to start off by
                         offering services at a rate of $50 per hour ($96,000 per year). This would give Pakistani professionals
@@ -49,11 +48,11 @@ function Outcomeblock() {
                                 return (
                                     <div key={index} className='flex gap-5 items-center mb-2'>
                                         <span className='w-5'>
-                                            <CgEditBlackPoint className='text-[#8A34D1]' size={18} />
-                                        </span>
-                                        <div className='text-sm'>
-                                            {val.text}
+                                            {/* <CgEditBlackPoint className='text-[#8A34D1]' size={18} /> */}
                                             <a href={val.link} className='bg-blue-500' target='_blank' rel='noreferrer' ><HiExternalLink className='text-gray-400' size={18} /></a>
+                                        </span>
+                                        <div className='text-base md:text-sm'>
+                                            {val.text}
                                         </div>
                                     </div>
                                 )

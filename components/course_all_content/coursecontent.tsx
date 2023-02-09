@@ -7,17 +7,17 @@ import { MdLabelImportant } from 'react-icons/md'
 function Coursecontent({ data }: { data: IQuarterData }) {
     return (
         <div className='w-full flex justify-center'>
-            <div className='w-[1200px] mt-20'>
+            <div className='w-[1200px] mt-20 xl:w-[95%] xl:pr-[80px] md:pr-0'>
 
                 {/* Course Description */}
 
                 <div className='text-zinc-800'>
-                    <h1 className='text-5xl font-bold flex items-center gap-5'>Course Description <TbNorthStar size={30} className='text-[#D46A8E]' /></h1>
+                    <h1 className='text-5xl font-bold flex items-center gap-5 md:text-4xl'>Course Description <span className='w-[30px]'><TbNorthStar size={30} className='text-[#D46A8E]' /></span></h1>
                     <div className='mt-10'>
                         {
                             data.description.map((val, index) => {
                                 return (
-                                    <p key={index} className='mb-5 word_spacing text-sm bg-slate-100 p-5 rounded-xl'>{val}</p>
+                                    <p key={index} className='mb-5 word_spacing text-base bg-slate-100 p-5 rounded-xl md:text-sm'>{val}</p>
                                 )
                             })
                         }
@@ -27,14 +27,14 @@ function Coursecontent({ data }: { data: IQuarterData }) {
                 {/* Course Outline */}
 
                 <div className='mt-20'>
-                    <h1 className='text-5xl font-bold flex items-center gap-5'>Course Outline <TbNorthStar size={30} className='text-[#D46A8E]' /></h1>
+                    <h1 className='text-5xl font-bold flex items-center gap-5 md:text-4xl'>Course Outline <span className='w-[30px]'><TbNorthStar size={30} className='text-[#D46A8E]' /></span></h1>
                     <div className='mt-10'>
                         {
                             data.outline.map((val, index) => {
                                 return (
                                     <div key={index}>
-                                        <h1 className='text-2xl text_gradient font-bold mb-5 mt-10'>{val.title}</h1>
-                                        <div className={val.children?.length ? 'text-sm text-zinc-800 bg-slate-100 p-5 rounded-xl' : ''}>
+                                        <h1 className='text-2xl text_gradient font-bold mb-5 mt-10 sm:text-xl'>{val.title}</h1>
+                                        <div className={val.children?.length ? 'text-base md:text-sm text-zinc-800 bg-slate-100 p-5 md:p-3 rounded-xl' : ''}>
                                             {
                                                 val.children?.map((child, childIndex) => {
                                                     return (
@@ -48,8 +48,8 @@ function Coursecontent({ data }: { data: IQuarterData }) {
                                                                                     <p>{sub_child.text}</p>
                                                                                     :
                                                                                     sub_child.type === 'link' ?
-                                                                                        <a href={sub_child.url} className='text-blue-600 flex items-center gap-3'>
-                                                                                            <HiOutlineExternalLink className='text-gray-400' size={16} />
+                                                                                        <a href={sub_child.url} className='text-blue-600 flex items-center gap-3 w-fit'>
+                                                                                            <span className='w-[4]'><HiOutlineExternalLink className='text-gray-400' size={16} /></span>
                                                                                             <span className='lowercase'>{sub_child.text}</span>
                                                                                         </a>
                                                                                         :
@@ -79,7 +79,7 @@ function Coursecontent({ data }: { data: IQuarterData }) {
                                                                                                                                                     :
                                                                                                                                                     list_item.type === 'link' ?
                                                                                                                                                         <a href={list_item.url} className='text-blue-600 flex items-center gap-3'>
-                                                                                                                                                            <HiOutlineExternalLink className='text-gray-400' size={16} />
+                                                                                                                                                            <span className='w-[10px]'><HiOutlineExternalLink className='text-gray-400' size={16} /></span>
                                                                                                                                                             <span className='lowercase'>{list_item.text}</span>
                                                                                                                                                         </a>
                                                                                                                                                         :

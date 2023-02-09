@@ -2428,7 +2428,6 @@ export const TracksData: ITrackData[] = [
         id: 'wmd',
         name: 'Web 3 and Metaverse',
         quarters: [
-            ...CompulsaryQuarterData,
             ...WMDQuarters
         ]
     },
@@ -2436,7 +2435,6 @@ export const TracksData: ITrackData[] = [
         id: 'cnc',
         name: 'Cloud-Native Computing',
         quarters: [
-            ...CompulsaryQuarterData,
             ...CNCQuarters
         ]
     },
@@ -2444,7 +2442,6 @@ export const TracksData: ITrackData[] = [
         id: 'ai',
         name: 'Artificial Intelligence (AI) and Deep Learning',
         quarters: [
-            ...CompulsaryQuarterData,
             ...AIQuarters
         ]
     },
@@ -2452,7 +2449,6 @@ export const TracksData: ITrackData[] = [
         id: 'iot',
         name: 'Ambient Computing and IoT',
         quarters: [
-            ...CompulsaryQuarterData,
             ...IOTQuarters
         ]
     },
@@ -2460,15 +2456,13 @@ export const TracksData: ITrackData[] = [
         id: 'gbs',
         name: 'Genomics and Bioinformatics',
         quarters: [
-            ...CompulsaryQuarterData,
             ...GBSQuarters
         ]
     },
     {
-        id: 'nps',
+        id: 'npa',
         name: 'Network Programmability and Automation',
         quarters: [
-            ...CompulsaryQuarterData,
             ...NPSQuarters
         ]
     }

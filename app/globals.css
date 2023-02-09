@@ -19,9 +19,7 @@ body {
 }
 
 .btn {
-  @apply text-xs py-5 px-10 rounded-full bg-[#8A34D1] text-white tracking-wider font-bold hover:bg-[#7d2fbd] active:bg-[#68279e];
-  box-shadow: inset 0 0 20px #461a6b;
-  text-shadow: 0 0 5px #461a6b;
+  @apply text-sm py-5 px-10 rounded-full bg-[#D46A8E] text-white tracking-wider font-bold hover:bg-[#ba5d7c] active:bg-[#9b4a65];
 }
 
 .piaic_bg_gradient {
@@ -41,8 +39,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.bg_pattern {
-  background-image: url('../public/assets/bg2.png');
-  background-position: cover;
-  background-repeat: no-repeat;
+.hover_applier:hover .hover_affected{
+  @apply bg-slate-500 text-white scale-105
 }

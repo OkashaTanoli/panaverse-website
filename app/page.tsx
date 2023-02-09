@@ -15,11 +15,11 @@ const poppins = Poppins(
 export default function Home() {
     return (
         <div className={`${poppins.className}`}>
-            <div className='h-3 w-full bg-gradient-to-r from-[#D46A8E] via-[#634ccd] to-[#403079]'></div>
+            <div className='h-2 w-full bg-gradient-to-r from-[#D46A8E] via-[#634ccd] to-[#403079]'></div>
             <Header />
             <Coverblock />
             <div className='mt-10' >
-                <Image src={Pattern} alt='pattern' />
+                <Image src={Pattern} alt='pattern'/>
             </div>
             <Content />
             <Quarterblock />

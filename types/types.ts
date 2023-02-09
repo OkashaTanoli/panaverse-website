@@ -31,3 +31,9 @@ export interface ITrackData {
     name: string,
     quarters: IQuarterData[]
 }
+
+
+export interface IDataType{
+    trackName:string,
+    data:IQuarterData
+}
