@@ -1,11 +1,8 @@
-import Image from 'next/image';
 import React from 'react';
-import Logo from '../../public/assets/panaverse-logo.png'
 
 function Content() {
     return (
         <div className='py-10 relative'>
-            <Image src={Logo} alt='logo' className='h-[90%] w-auto md:w-80% md:h-auto absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-0 grayscale opacity-10' />
             <div className='z-10 w-[1200px] m-auto text-zinc-800 xl:w-[95%]'>
                 <h1 className='font-bold text-xl'>The Program in a Nutshell:&nbsp; <span className='text_gradient'>Earn While You Learn</span></h1>
                 <p className='tracking-wide mt-2 sm:text-sm'>In this brand-new type of curriculum, students will learn how to make money and boost exports
