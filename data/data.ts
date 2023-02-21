@@ -1,4 +1,4 @@
-// Data is set in such a format that each line is represented as an boject with its element type, text, and url(if it is link).
+// Data is set in such a format that each line is represented as an object with its element type, text, and url(if it is link).
 // Each child is an array because there can be two or more lines associated with each other.
 // There are many kinds of element type such as text, link, sub - heading, h3, note and list.
 // Each section has a title and many children(in some cases there is no child).
