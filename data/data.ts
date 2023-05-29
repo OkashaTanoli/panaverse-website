@@ -821,7 +821,7 @@ export const CompulsaryQuarterData: IQuarterData[] = [
                         },
                         {
                             type: 'link',
-                            text: 'Twittwer clone',
+                            text: 'Twitter clone',
                             url: 'https://www.youtube.com/watch?v=nzJsYJPCc80',
                         }
                     ]
